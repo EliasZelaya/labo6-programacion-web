@@ -1,0 +1,14 @@
+
+doctype html
+html
+    head
+        title Lista de Usuarios
+        style
+            include ./styles/allUsers.css
+    body
+        div#users-container 
+            h1 Usuarios
+            ul#users
+                each u in users
+                    li#card #{u.name} - #{u.lastname}
+            a(href="/") Registro

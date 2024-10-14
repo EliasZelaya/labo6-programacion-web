@@ -1,0 +1,18 @@
+head
+  title Informacion del usuario
+  style 
+    include ./styles/form.css
+body
+  div#container
+    form(action="/home" method="POST")
+      div
+        label(for="name") Nombre:
+        input(type="text" id="name" name="name" placeholder="Tu nombre" required)
+      div
+        label(for="lastname") Apellido:
+        input(type="text" id="lastname" name="lastname" placeholder="Tu apellido" required)
+      div
+        label(for="email") Email:
+        input(type="email" id="email" name="email" placeholder="Tu email" required)
+      div
+        button(type="submit") Enviar

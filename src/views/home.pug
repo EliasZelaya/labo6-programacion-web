@@ -1,0 +1,16 @@
+doctype html
+html
+  
+  head
+    title User Information
+  style  
+    include ./styles/home.css
+
+
+  body   
+    form(action='/allUsers' method='GET').container#saludo
+      h1  👋 Hola, #{user.name }
+      a(href="/") 
+      p Tu nombre es: #[strong #{user.lastname}]
+      p Tu email es: #[strong #{user.email}]  
+      button(type='submit') Usuarios 
