@@ -14,7 +14,12 @@ const save = (user) => {
   return user;
 }
 
+const getUsers = () => {
+  return users;
+};
+
 module.exports = {
   User,
-  save
+  save,
+  getUsers
 };

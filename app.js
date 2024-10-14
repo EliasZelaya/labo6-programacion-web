@@ -6,7 +6,7 @@ const app = express();
 // Establecemos Pug como motor de plantillas
 app.set('view engine', 'pug');
 // Especificamos la carpeta donde se encuentran las vistas
-app.set('views', path.join(__dirname, './src/views'));
+app.set('views', path.join(__dirname, 'src/views'));
 // Middleware para parsear datos de formularios
 app.use(express.urlencoded({ extended: true }));
 // Usamos las rutas de usuario

@@ -1,4 +1,4 @@
-const {addNewUser} = require('../services/user.service');
+const {addNewUser, showAllUsers} = require('../services/user.service');
 
 const addUserController = (req, res) => {
   try {
@@ -15,7 +15,19 @@ const showForm = (req, res) => {
   res.render('form.pug');
 }
 
+const showUsersController = (req, res) => {
+  try {
+    const users = showAllUsers();
+    
+    res.render('allUsers.pug', {users});
+  } catch (e) {
+    console.log(e);
+    res.status(500).send('Internal Server Error');
+  }
+}
+
 module.exports = {
   addUserController,
-  showForm
+  showForm,
+  showUsersController
 }
